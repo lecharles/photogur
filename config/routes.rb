@@ -1,6 +1,10 @@
 Rails.application.routes.draw do
   get "pictures" => "pictures#index"
   #point this GET request at the INDEX ACTION in the PICTURES CONTROLLER.
+
+  post 'pictures' => 'pictures#create' # this is a new line of code
+  get 'pictures/new' => 'pictures#new' # this is also a new line of code
+  
   get 'pictures/:id' => 'pictures#show', as: 'picture'
 end
 
