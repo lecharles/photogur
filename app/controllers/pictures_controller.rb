@@ -11,6 +11,7 @@ class PicturesController < ApplicationController
   # def create
   #   render :text => "Saving a picture. URL: #{params[:url]}, Title: #{params[:title]}, Artist: #{params[:artist]}"
   # end
+
   def new
     @picture = Picture.new
   end
@@ -31,7 +32,5 @@ class PicturesController < ApplicationController
   def picture_params
     params.require(:picture).permit(:artist, :title, :url)
   end
-
-
 
 end
