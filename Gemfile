@@ -45,3 +45,5 @@ group :development do
   gem 'spring'
 end
 
+#Use pry: an alternative to irb.
+gem "pry"
