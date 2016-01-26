@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   get "pictures" => "pictures#index"
   #point this GET request at the INDEX ACTION in the PICTURES CONTROLLER.
+  get 'pictures/:id' => 'pictures#show', as: 'picture'
 end
 
   # The priority is based upon order of creation: first created -> highest priority.
