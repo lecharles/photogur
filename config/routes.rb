@@ -1,18 +1,25 @@
 Rails.application.routes.draw do
   root 'pictures#index'
+
+  #point this GET request at the INDEX ACTION in the PICTURES CONTROLLER.
   get "pictures" => "pictures#index"
 
+  #"THE CURD"
+
+  #CREATE
   post 'pictures' => 'pictures#create' # this is a new line of code
   get 'pictures/new' => 'pictures#new' # this is also a new line of code
 
+  #UPDATE
   get 'pictures/:id/edit' => "pictures#edit", as: "edit_picture"
   patch 'pictures/:id' => "pictures#update"
 
+  #READ
   get 'pictures/:id' => 'pictures#show', as: 'picture'
 
+  #DELETE
   delete 'pictures/:id' => 'pictures#destroy', as: "delete_picture"
 
-  #point this GET request at the INDEX ACTION in the PICTURES CONTROLLER.
 end
 
   # The priority is based upon order of creation: first created -> highest priority.
